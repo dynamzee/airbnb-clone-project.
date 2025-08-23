@@ -88,37 +88,37 @@ Implements authentication, authorization, and compliance measures. Monitors for 
 
 🗄 Database Design
 
-👤 Users
+👤 Users:
 
-Fields: id, name, email, password_hash, role
+Fields: ID, name, email, password-hash, role.
 
 Relationships: Can host multiple properties, make bookings, and leave reviews.
 
 
-🏠 Properties
+🏠 Properties:
 
-Fields: id, title, description, location, price_per_night
+Fields: id, title, description, location, price per night.
 
 Relationships: Belongs to a user (host), has many bookings and reviews.
 
 
-📅 Bookings
+📅 Bookings:
 
-Fields: id, check_in_date, check_out_date, status, total_price
+Fields: ID, check-in-date, check-out-date, status, total price.
 
 Relationships: Belongs to a user (guest) and a property, linked to payments.
 
 
-💳 Payments
+💳 Payments:
 
-Fields: id, amount, payment_method, payment_date, status
+Fields: ID, amount, payment method, payment date, status.
 
 Relationships: Associated with a booking.
 
 
-⭐ Reviews
+⭐ Reviews:
 
-Fields: id, rating, comment, created_at, updated_at
+Fields: ID, rating, comment, created at, updated at.
 
 Relationships: Belongs to a user (guest) and a property.
 
@@ -139,27 +139,27 @@ A Review links a user to a property.
 
 🚀 Feature Breakdown
 
-👤 User Management
+👤 User Management:
 
 Secure registration, login, and profile management. Enables role differentiation (guest, host, admin).
 
-🏠 Property Management
+🏠 Property Management:
 
 Hosts can create, update, and delete listings. Ensures guests see accurate property information.
 
-📅 Booking System
+📅 Booking System:
 
 Guests can make reservations with check-in and check-out dates. Prevents double-bookings and ensures availability tracking.
 
-💳 Payment Processing
+💳 Payment Processing:
 
 Securely handles transactions with reliable status tracking (pending, successful, failed).
 
-⭐ Review System
+⭐ Review System:
 
 Guests can leave feedback on properties. Builds trust and transparency for future users.
 
-⚡ Data Optimization
+⚡ Data Optimization:
 
 Caching and database indexing reduce query times and server load, ensuring scalability.
 
@@ -168,32 +168,32 @@ Caching and database indexing reduce query times and server load, ensuring scala
 
 🔒 API Security
 
-🔑 Authentication
+🔑 Authentication:
 
 JWT/OAuth2 ensures only verified users access the system.
 
 
-🛂 Authorization
+🛂 Authorization:
 
 RBAC (Role-Based Access Control) prevents unauthorized actions.
 
 
-⏱ Rate Limiting
+⏱ Rate Limiting:
 
 Protects against brute force attacks and DoS attempts.
 
 
-🧑‍💻 Data Encryption
+🧑‍💻 Data Encryption:
 
 TLS/HTTPS secures communication; AES secures sensitive data.
 
 
-💳 Payment Security
+💳 Payment Security:
 
 PCI-DSS compliance with tokenization for safe transactions.
 
 
-🛡 Monitoring & Logging
+🛡 Monitoring & Logging:
 
 Detects suspicious activity and helps respond to breaches quickly.
 
@@ -201,24 +201,24 @@ Detects suspicious activity and helps respond to breaches quickly.
 
 ---
 
-🔄 CI/CD Pipeline
+🔄 CI/CD Pipeline:
 
 What is CI/CD?
 
 Continuous Integration and Continuous Deployment automate building, testing, and deploying code.
 
-Importance
+Importance:
 
-Faster development cycles
+1. Faster development cycles.
 
-Improved code quality
+2. Improved code quality.
 
-Reliable and repeatable deployments
+3. Reliable and repeatable deployments.
 
-Supports rapid scaling
+4. Supports rapid scaling.
 
 
-Tools
+Tools:
 
 GitHub Actions – Workflow automation for testing and deployment.
 
